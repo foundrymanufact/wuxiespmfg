@@ -1,9 +1,3 @@
-/**
-* Template Name: UpConstruction - v1.3.0
-* Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 document.addEventListener('DOMContentLoaded', () => {
   "use strict";
 
@@ -210,3 +204,24 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+function emailHandle() {
+  alert_msg = document.getElementById("alert")
+  var params = {
+    sender: document.getElementsByName("sender").value,
+    from_name: document.getElementById("from_name").value,
+    email_id : document.getElementById("email_id").value,
+    subject : document.getElementById("subject").value,
+    message : document.getElementById("message").value
+  }
+  emailjs.send("service_1fgibbr", "template_lui8z6a", params).then(function (res) {
+    if (res.status === 200)
+    {
+      alert(`Email Sent Successfully!`)
+    }
+    else 
+    {
+      alert(`Email Failed!`)
+    }
+  })
+}
