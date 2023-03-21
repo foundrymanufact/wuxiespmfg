@@ -47,6 +47,12 @@ a:hover {
   text-decoration: none;
 }
 
+.gallery-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 h1,
 h2,
 h3,
@@ -255,6 +261,7 @@ section {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+
 .header {
   z-index: 997;
   position: absolute;
